@@ -1,5 +1,7 @@
 let taskInput = document.getElementById('taskInput');
 let taskList = document.getElementById('taskList');
+let editTask = false;
+let currentTask;  // Keeps track of the task being edited
 
 function addTask() {
     const task = taskInput.value.trim();
@@ -9,8 +11,19 @@ function addTask() {
         return;
     }
 
+    if (editTask) {
+        // If in edit mode, update the current task's text
+        currentTask.firstChild.textContent = task;
+        taskInput.value = ''; // Clear the input field
+        editTask = false;
+        return;
+    }
+
     const li = document.createElement('li');
-    li.textContent = task;
+    
+    const taskText = document.createElement('span');
+    taskText.textContent = task;  
+    li.appendChild(taskText);
 
     // Create a delete button
     const deleteButton = document.createElement('button');
@@ -23,7 +36,31 @@ function addTask() {
         }
     };
 
-    li.appendChild(deleteButton); 
-    taskList.appendChild(li);
+    // Create an update button
+    const updateButton = document.createElement('button');
+    updateButton.textContent = 'Update';
+    updateButton.style.marginLeft = '10px';
+    updateButton.onclick = function() {
+        taskInput.value = taskText.textContent;  
+        currentTask = li;
+        editTask = true;
+    };
+
+
+      // Create a done button
+      const doneButton = document.createElement('button');
+      doneButton.textContent = 'Done';
+      doneButton.style.marginLeft = '10px'; 
+      doneButton.onclick = function() {
+          taskText.style.textDecoration = 'line-through';  
+          taskText.style.color = 'gray';  
+          doneButton.disabled = true;
+      };
+
+    li.appendChild(deleteButton);  
+    li.appendChild(updateButton);  
+    li.appendChild(doneButton);    
+    taskList.appendChild(li);  
+
     taskInput.value = ''; 
 }
