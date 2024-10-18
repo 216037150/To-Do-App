@@ -1,0 +1,89 @@
+body{
+    background-color: rgb(74, 121, 121);
+    text-align: center;
+}
+
+.todo{
+    text-align: center;
+    background-color: rgb(16, 89, 142);
+    height: 200px;
+    position: relative;
+    width: 450px;
+    height: 550px;
+    padding: 30px 50px;
+    justify-content: center;
+    margin-left: 450px;
+    border-radius: 10px;
+}
+
+
+.todo input{
+    width: 800px;
+    padding: 10px;
+    margin-right: 20px;
+    height: 20px;
+    border-radius: 20px;
+    background-color: white;
+}
+
+.input-container{
+    display: flex;
+    /* background-color: aqua; */
+    gap: 0px;
+}
+
+#addTaskBtn{
+    background-color: rgb(112, 199, 124);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    border-radius: 20px;
+    height: 45px;
+    width: 100px;
+}
+.Btn{
+    flex-direction: column;
+    gap: 50px;
+    border-radius: 20px;
+    
+
+}
+#clearTasksBtn{
+    background-color: rgb(0, 145, 255);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    border-radius: 20px;
+    height: 45px;
+    width: 100px
+}
+
+
+.todo li{
+    position: relative;
+    
+}
+/* // delete all tasks */
+
+/* ul {
+    list-style-type: disc; 
+    padding-left: 0; 
+} */
+
+/* li {
+    margin: 5px 0; 
+    padding-left: 10px; 
+    display: flex; 
+    align-items: center; 
+} */
+
+button {
+    margin-left: 10px; 
+    border: none; 
+    background: transparent; 
+    cursor: pointer; 
+    color: red;
+}
+
