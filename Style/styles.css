@@ -1,11 +1,16 @@
 body{
-    background-color: rgb(74, 121, 121);
+    background-color: rgb(170, 190, 190);
     text-align: center;
+}
+
+h1{
+    color: white;
+    font-size: 30px;
 }
 
 .todo{
     text-align: center;
-    background-color: rgb(16, 89, 142);
+    background-color: rgb(25, 92, 114);
     height: 200px;
     position: relative;
     width: 450px;
@@ -14,6 +19,7 @@ body{
     justify-content: center;
     margin-left: 450px;
     border-radius: 10px;
+    margin-top: 20px;
 }
 
 
@@ -118,6 +124,10 @@ button:hover {
     background-color: #FF4D4D;
 }
 
+.delete-button:hover{
+    background-color: red;
+}
+
 .delete-button:hover {
     background-color: #e60000;
 }
@@ -151,3 +161,5 @@ span {
     overflow-wrap: break-word; 
     margin-right: 10px; 
 }
+/* \\\\\\\\\\\\\\\\\\\\\\\\\\\\\ fix\\\\\\\\\\\\\\\\\\\ widt-tex input */
+

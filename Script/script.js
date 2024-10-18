@@ -12,9 +12,8 @@ function addTask() {
     }
 
     if (editTask) {
-        // If in edit mode, update the current task's text
         currentTask.firstChild.textContent = task;
-        taskInput.value = ''; // Clear the input field
+        taskInput.value = ''; 
         editTask = false;
         return;
     }
@@ -24,10 +23,14 @@ function addTask() {
     const taskText = document.createElement('span');
     taskText.textContent = task;  
     li.appendChild(taskText);
+    
 
     // Create a delete button
     const deleteButton = document.createElement('button');
     deleteButton.textContent = 'x';
+    deleteButton.style.backgroundColor = 'red';
+    deleteButton.style.HoverColor = 'purple';
+
     deleteButton.style.borderRadius = '5px';
     deleteButton.onclick = function() {
         const confirmation = confirm('Are you sure you want to delete this task?');
@@ -39,6 +42,8 @@ function addTask() {
     // Create an update button
     const updateButton = document.createElement('button');
     updateButton.textContent = 'Update';
+    updateButton.style.borderRadius = '5px';
+    updateButton.style.backgroundColor = '#FFC107';
     updateButton.style.marginLeft = '10px';
     updateButton.onclick = function() {
         taskInput.value = taskText.textContent;  
