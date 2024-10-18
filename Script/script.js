@@ -1,7 +1,7 @@
 let taskInput = document.getElementById('taskInput');
 let taskList = document.getElementById('taskList');
 let editTask = false;
-let currentTask;  // Keeps track of the task being edited
+let currentTask; 
 
 function addTask() {
     const task = taskInput.value.trim();
@@ -58,7 +58,7 @@ function addTask() {
       doneButton.style.marginLeft = '10px'; 
       doneButton.onclick = function() {
           taskText.style.textDecoration = 'line-through';  
-          taskText.style.color = 'gray';  
+          taskText.style.color = 'grey';  
           doneButton.disabled = true;
       };
 
